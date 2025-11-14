@@ -1,0 +1,416 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+a {
+  color: #84309c;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #e7e8e8;
+  background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%) !important;
+  min-height: 100vh;
+}
+
+/* Force dark theme on all pages */
+html,
+body,
+#__next {
+  background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%) !important;
+}
+
+/* Vesting Pages Dark Theme Override */
+.bg-white,
+[class*="bg-white"] {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(227, 6, 110, 0.2) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+}
+
+.text-gray-900,
+.text-gray-800,
+.text-gray-700 {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Force white text on inputs specifically */
+input.text-gray-900,
+input[class*="text-gray"] {
+  color: #ffffff !important;
+}
+
+.text-gray-600,
+.text-gray-500 {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.text-gray-400 {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.bg-gray-50 {
+  background: rgba(255, 255, 255, 0.03) !important;
+}
+
+.bg-red-50 {
+  background: rgba(244, 67, 54, 0.1) !important;
+}
+
+.bg-blue-50 {
+  background: rgba(33, 150, 243, 0.1) !important;
+}
+
+.bg-yellow-50 {
+  background: rgba(255, 193, 7, 0.1) !important;
+}
+
+.bg-green-50 {
+  background: rgba(76, 175, 80, 0.1) !important;
+}
+
+.text-blue-600,
+.text-blue-700 {
+  color: #4FC3F7 !important;
+}
+
+.text-red-900,
+.text-red-800,
+.text-red-700 {
+  color: #F44336 !important;
+}
+
+.text-yellow-900,
+.text-yellow-800,
+.text-yellow-700 {
+  color: #FFC107 !important;
+}
+
+.text-green-900,
+.text-green-800,
+.text-green-700 {
+  color: #4CAF50 !important;
+}
+
+.border-gray-200,
+.border-gray-300 {
+  border-color: rgba(227, 6, 110, 0.2) !important;
+}
+
+.border-red-300 {
+  border-color: rgba(244, 67, 54, 0.4) !important;
+}
+
+.border-blue-200 {
+  border-color: rgba(33, 150, 243, 0.4) !important;
+}
+
+.border-yellow-200,
+.border-yellow-300 {
+  border-color: rgba(255, 193, 7, 0.4) !important;
+}
+
+.border-green-200,
+.border-green-300 {
+  border-color: rgba(76, 175, 80, 0.4) !important;
+}
+
+/* Input fields */
+input,
+select,
+textarea {
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: #fff !important;
+  border-color: rgba(227, 6, 110, 0.3) !important;
+}
+
+input::placeholder,
+select::placeholder,
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #E3066E !important;
+  box-shadow: 0 0 0 3px rgba(227, 6, 110, 0.2) !important;
+}
+
+select option {
+  background: #1a1a1a !important;
+  color: #fff !important;
+}
+
+/* Buttons - new theme */
+button {
+  transition: all 0.2s ease;
+}
+
+button:not(.rainbow-connect-button):not([class*="secondaryButton"]):not([class*="dangerButton"]) {
+  background: linear-gradient(135deg, #E3066E, #213147) !important;
+  color: #fff !important;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(227, 6, 110, 0.3);
+}
+
+button:not(.rainbow-connect-button):not([class*="secondaryButton"]):not([class*="dangerButton"]):hover:not(:disabled) {
+  background: linear-gradient(135deg, #213147, #E3066E) !important;
+  box-shadow: 0 6px 16px rgba(227, 6, 110, 0.4);
+  transform: scale(1.05);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Rainbow Kit Connect Button - White style */
+button[data-testid*="rk"],
+button[class*="rainbow"],
+[class*="rainbow"] button,
+div[role="button"]:has([class*="rk"]) {
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: #000 !important;
+  font-weight: 600 !important;
+  border: 1px solid rgba(227, 6, 110, 0.3) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+}
+
+button[data-testid*="rk"]:hover,
+button[class*="rainbow"]:hover,
+[class*="rainbow"] button:hover {
+  background: rgba(255, 255, 255, 1) !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3) !important;
+  transform: scale(1.02) !important;
+}
+
+/* Shadow overrides */
+.shadow-lg,
+.shadow-xl {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Specific button color overrides */
+.bg-gray-600 {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(227, 6, 110, 0.3);
+}
+
+.hover\:bg-gray-700:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(227, 6, 110, 0.5);
+}
+
+.bg-red-600 {
+  background: linear-gradient(135deg, #F44336, #E53935) !important;
+  color: white !important;
+}
+
+.hover\:bg-red-700:hover {
+  background: linear-gradient(135deg, #E53935, #D32F2F) !important;
+}
+
+/* Links */
+a {
+  color: #E3066E !important;
+}
+
+a:hover {
+  color: #213147 !important;
+}
+
+/* Max-width containers */
+.max-w-6xl {
+  background: transparent !important;
+}
+
+/* Header backgrounds */
+.border-b {
+  border-bottom: 1px solid rgba(227, 6, 110, 0.2) !important;
+  background: rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Page backgrounds - force dark everywhere */
+main,
+div[class*="container"],
+div[class*="max-w"] {
+  background: transparent !important;
+}
+
+/* Specific overrides - only target vesting pages */
+[class*="bg-white"][class*="shadow-lg"],
+[class*="bg-white"][class*="shadow-xl"] {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(227, 6, 110, 0.2) !important;
+}
+
+/* Vesting specific page overrides */
+[class*="space-y-6"] > div,
+[class*="space-y-4"] > div {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(227, 6, 110, 0.2) !important;
+}
+
+/* Text center containers */
+.text-center {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Hide Instructions Box */
+[class*="border-blue"]:has(h3),
+[class*="bg-blue"]:has(h3) {
+  display: none !important;
+}
+
+/* Main Title - Pink & Dark Blue gradient */
+h1[class*="text-3xl"],
+h1[class*="font-bold"] {
+  background: linear-gradient(135deg, #E3066E, #213147) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  font-size: 2rem !important;
+  font-weight: 800 !important;
+}
+
+/* Subtitle */
+p[class*="text-gray-600"] {
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-size: 1.125rem !important;
+}
+
+/* Clean form fields - match main page */
+input[type="text"],
+input[type="number"],
+select {
+  background: rgba(0, 0, 0, 0.4) !important;
+  border: 1px solid rgba(227, 6, 110, 0.3) !important;
+  border-radius: 8px !important;
+  padding: 12px 16px !important;
+  color: #fff !important;
+  font-size: 14px !important;
+  transition: all 0.2s ease !important;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+  background: rgba(0, 0, 0, 0.5) !important;
+  border-color: #E3066E !important;
+  box-shadow: 0 0 0 3px rgba(227, 6, 110, 0.2) !important;
+  outline: none !important;
+}
+
+/* Address fields - MUST come after general input styling to override */
+input[readonly],
+input[readonly][type="text"],
+input[class*="font-mono"],
+input[class*="bg-gray-50"],
+input.bg-gray-50,
+input.text-gray-900 {
+  color: #fff !important;
+  font-family: ui-monospace, monospace !important;
+  background: rgba(0, 0, 0, 0.3) !important;
+  border: 1px solid rgba(227, 6, 110, 0.3) !important;
+  cursor: default !important;
+}
+
+/* Even more specific override for readonly inputs with inline classes */
+input[readonly].bg-gray-50.text-gray-900,
+input[readonly][class*="gray"] {
+  color: #ffffff !important;
+  background: rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Labels */
+label {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  margin-bottom: 8px !important;
+}
+
+/* Configuration and Schedule cards - cleaner look */
+h3[class*="font-bold"] {
+  background: linear-gradient(135deg, #E3066E, #213147) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  font-size: 1.25rem !important;
+  margin-bottom: 1rem !important;
+}
+
+/* Instructions section - hide it */
+div:has(> h3:contains("Instructions")),
+div[class*="border-blue"][class*="rounded"] {
+  display: none !important;
+}
+
+/* Alternative way to hide instructions */
+.bg-blue-50.border.border-blue-200 {
+  display: none !important;
+}
+
+/* Card spacing and padding - match main page */
+[class*="shadow-lg"] {
+  padding: 2rem !important;
+  border-radius: 16px !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(227, 6, 110, 0.2) !important;
+}
+
+/* Grid layouts */
+[class*="grid-cols"] input,
+[class*="grid-cols"] select {
+  width: 100% !important;
+}
+
+/* Schedule cards */
+[class*="border"][class*="rounded"][class*="p-"] {
+  background: rgba(0, 0, 0, 0.3) !important;
+  border: 1px solid rgba(227, 6, 110, 0.2) !important;
+  border-radius: 12px !important;
+}
+
+/* Network warning - keep visible but styled */
+[class*="bg-red-50"][class*="border-red"] {
+  background: rgba(244, 67, 54, 0.15) !important;
+  border: 2px solid rgba(244, 67, 54, 0.4) !important;
+  border-radius: 12px !important;
+  padding: 1rem !important;
+}
+
+/* Warning icons and text */
+[class*="text-red"] {
+  color: #F44336 !important;
+}
+
+[class*="text-yellow"] {
+  color: #FFC107 !important;
+}
+
+/* Links - View on Etherscan */
+a[href*="etherscan"] {
+  color: #E3066E !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease !important;
+}
+
+a[href*="etherscan"]:hover {
+  color: #213147 !important;
+  text-decoration: underline !important;
+}

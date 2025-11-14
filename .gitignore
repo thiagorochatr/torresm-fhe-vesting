@@ -1,0 +1,11 @@
+.env
+node_modules/
+.next/
+app/.next/
+*.cache
+/circuits/node_modules/
+/node_modules/
+/fhe-contracts/node_modules/
+/app/node_modules/
+/stylus-contracts/target/
+/app/node_modules/

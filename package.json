@@ -1,0 +1,46 @@
+{
+  "name": "zk",
+  "version": "1.0.0",
+  "description": "ZK application",
+  "private": true,
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=20.18.0"
+  },
+  "scripts": {
+    "setup": "./setup.sh",
+    "dev": "pnpm --filter app dev",
+    "build": "pnpm run setup",
+    "build:circuits": "pnpm --filter circuits build",
+    "build:app": "pnpm --filter app build",
+    "build:contracts": "cd contracts && cargo build --release",
+    "deploy:contracts": "cd contracts && source .env && cargo stylus deploy --endpoint=$RPC_URL --private-key=$PRIVATE_KEY --constructor-args $OWNER_ADDRESS",
+    "deploy:app": "pnpm --filter app deploy",
+    "test": "pnpm run test:contracts && pnpm run test:app",
+    "test:contracts": "cd contracts && cargo test",
+    "test:app": "pnpm --filter app test",
+    "clean": "pnpm --filter circuits clean && pnpm --filter app clean && cd contracts && cargo clean",
+    "lint": "pnpm --filter app lint",
+    "typecheck": "pnpm --filter app type-check"
+  },
+  "workspaces": [
+    "circuits",
+    "app"
+  ],
+  "devDependencies": {
+    "@types/node": "^20.0.0"
+  },
+  "keywords": [
+    "zk-proofs",
+    "arbitrum",
+    "stylus",
+    "groth16",
+    "privacy",
+    "zama",
+    "fhevm",
+    "fhe",
+    "fhevm-solidity"
+  ],
+  "author": "Thiago Rocha",
+  "license": "MIT"
+}
